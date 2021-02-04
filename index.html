@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/emblem.svg" type="image/x-icon">
+    <title>Тестовое для Reactive</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <img class="header-logo-img" src="img/logo.svg" alt="logo">
+                <p class="header-logo-text">Услуги и сервисы Пермского края</p>
+            </div>
+            <div class="header-user">
+                <img class="header-user-img" src="img/user_vector.svg" alt="user-vector">
+                <p class="header-user-name">Константинопольский К.К</p>
+                <a class="header-user-link" href="#">Выйти</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-service">
+            <div class="main-service-discription">
+                <h1 class="main-service-discription-h1">Выдача градостроительного плана земельного участка</h1>
+                <div class="main-service-discription-text">Градостроительный план земельного участка выдается в целях
+                    обеспечения субъектов градостроительной деятельности информацией, необходимой для
+                    архитектурно-строительного проектирования, строительства, реконструкции объектов капитального
+                    строительства в границах земельного участка.</div>
+            </div>
+            <div class="main-service-agency">
+                <img src="img/emblem.svg" alt="emblem-rf" class="main-service-agency-img">
+                <p class="main-service-agency-title">Услугу предоставляет</p>
+                <div class="main-service-agency-discription">Орган местного самоуправления</div>
+            </div>
+        </div>
+        <hr class="main-hr">
+        <div class="main-form">
+            <form id="form-plan" name="plan" action="#" class="main-form-block">
+
+                <div class="main-form-block-declarant">
+                    <div class="main-form-block-declarant-wrapper">
+                        <span class="main-form-block-declarant-first">1</span>
+                        <legend class="main-form-block-declarant-h2">Выбор заявителя</legend>
+                    </div>
+                    <fieldset class="main-form-block-declarant-panel">
+                        <div class="panel-declarant panel">
+                            <div class="panel-wrapper line">
+                                <label class="panel-label"><input id="fz" name="person"
+                                        class="main-form-block-declarant-item" type="radio" checked="checked">
+                                    <span class="panel-checkbox"></span>
+                                    <div class="main-form-block-declarant-item-info">
+                                        <span id="name-user">Константинопольский К.К.</span></br>
+                                        <p>Физическое лицо</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="panel-wrapper grey">
+                                <label class="panel-label"><input id="ur" name="person"
+                                        class="main-form-block-declarant-item" type="radio">
+                                    <span class="panel-checkbox"></span>
+                                    <div class="main-form-block-declarant-item-info">
+                                        <span id="agency-user">ООО «Константинополь»</span></br>
+                                        <p>Юридическое лицо</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <input type="button" class="main-form-block-declarant-btn main-btn-next" value="Продолжить">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="main-form-block-data">
+                    <div class="main-form-block-data-wrapper">
+                        <span class="main-form-block-data-second">2</span>
+                        <legend class="main-form-block-data-second-h2">Данные заявителя</legend>
+                    </div>
+                    <fieldset class="main-form-block-data-wrapper-panel panel">
+                        <div class="panel-data">
+                            <label for="lastname">Фамилия</label>
+                            <input class="form-control" type="text" placeholder="Константинопольский" name="lastname"
+                                required />
+                            <label for="firstname">Имя</label>
+                            <input type="text" placeholder="Константин" name="firstname" required />
+                            <label for="patronymic">Отчество</label>
+                            <input type="text" required placeholder="Константинович" name="patronymic">
+                            <label for="email">Электронная почта</label>
+                            <input type="email" required placeholder="konstantinopolskiy@mail.ru" name="email">
+                            <label for="tel">Телефон</label>
+                            <input type="tel" placeholder="+7 (901) 123-45-67" required name="tel">
+                            <span class="panel-doc">Документ удостоверяющий личность</span>
+                            <label for="document">Документ</label>
+                            <input type="text" required placeholder="Паспорт" name="document">
+                            <div class="panel-passport">
+                                <div class="panel-passport-series">
+                                    <label for="series">Серия</label>
+                                    <input type="text" required placeholder="5700" name="series">
+                                </div>
+                                <div class="panel-passport-number">
+                                    <label for="number">Номер</label>
+                                    <input type="text" required placeholder="555888" name="number">
+                                </div>
+                            </div>
+                            <div class="panel-passport-received">
+                                <label for="">Когда выдан</label>
+                                <div class="panel-passport-received-wrapper">
+                                    <div class="panel-passport-received-wrapper-day">
+                                        <label for="day">День</label>
+                                        <input type="text" required placeholder="19" name="day">
+                                    </div>
+                                    <div class="panel-passport-received-wrapper-month">
+                                        <label for="month">Месяц</label>
+                                        <input type="text" required placeholder="10" name="month">
+                                    </div>
+                                    <div class="panel-passport-received-wrapper-year">
+                                        <label for="year">Год</label>
+                                        <input id="year" type="text" required placeholder="1990" name="year">
+                                    </div>
+                                </div>
+                            </div>
+                            <input form="form-plan" type="button" class="main-form-block-data-btn main-btn-next"
+                                type="submit" form="form-plan" value="Продолжить">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="main-form-block-consent">
+                    <div class="main-form-block-consent-wrapper">
+                        <span class="main-form-block-consent-third">3</span>
+                        <h2 class="main-form-block-consent-third-h2">Согласие</h2>
+                    </div>
+                    <fieldset class="main-form-block-consent-wrapper-panel panel">
+
+                        <div class="panel-consent">
+                            <span class="panel-doc">Требуется ваше согласие по следующим пунктам:</span>
+                            <ul class="panel-list">
+                                <li class="panel-item">
+                                    <p class="panel-item-text">Я подтверждаю, что вся представленная информация является
+                                        достоверной и точной;</p>
+                                </li>
+                                <li class="panel-item">
+                                    <p class="panel-item-text">Я несу ответственность в соответствии с действующим
+                                        законодательством Российской Федерации за предоставление заведомо ложных или
+                                        неполных сведений;</p>
+                                </li>
+                                <li class="panel-item">
+                                    <p class="panel-item-text">Я выражаю свое согласие на необходимое использование и
+                                        обработку своих персональных данных, в том числе в информационных системах;</p>
+                                </li>
+                                <li class="panel-item">
+                                    <p class="panel-item-text">Со сроками оказания государственной услуги ознакомлен.
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="panel-confirm confirm">
+                                <label for="confirm">
+                                    <input name="confirm" id="confirm" type="checkbox" checked="checked"><span><img
+                                            src='img/vector.svg' alt='vector'></span>
+                                    <p>Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</p>
+                                </label>
+                            </div>
+                            <div class="panel-confirm notification line">
+                                <label for="notification">
+                                    <input name="notification" id="notification" type="checkbox"
+                                        checked="checked"><span><img src='img/vector.svg' alt='vector'></span>
+                                    <p>Я уведомлен о том, что результат будет получен в электронном виде</p>
+                                </label>
+                            </div>
+                            <div class="panel-check">
+                                <div class="panel-check-wrapper">
+                                    <img class="panel-check-wrapper-img" src="img/bell.svg" alt="bell">
+                                    <p class="panel-check-wrapper-text">Пожалуйста, еще раз внимательно проверьте все
+                                        данные перед отправкой</p>
+                                </div>
+                            </div>
+                            <input type="submit" class="main-form-block-consent-btn main-btn-next" type="submit"
+                                form="form-plan" value="Отправить"></input>
+                            <span class="specification">
+                                Нажимая кнопку «Отправить», вы соглашаетесь с
+                                <a class="specification-link" href="#">правилами хранения и обработки персональных
+                                    данных</a>
+                            </span>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+        <div class="form-sent">
+            <div class="form-sent-block">
+                <div class="form-sent-block-wrapper">
+                    <span class="form-sent-block-wrapper-vector"><img src='img/vector.svg' alt='vector'></span>
+                    <h2 class="form-sent-block-wrapper-h2">Заявление принято</h2>
+                </div>
+                <div class="form-sent-info">
+                    <div class="form-sent-info-number"><span>Номер заявления <span
+                                id="statement-number">RU-1234567</span>. Максимальный срок предоставления услуги — 20
+                            рабочих дней. Следите за статусом заявления в <a class="form-sent-info-number-link"
+                                href="#">Личном кабинете.</a></span></div>
+                    <div class="form-sent-info-contact">
+                        <p>Если у вас остались вопросы по оказанию услуги, пожалуйста, обращайтесь по телефону +7 (342)
+                            123-45-67.</p>
+                    </div>
+                </div>
+                <div class="form-sent-button">
+                    <a class="form-sent-info-btn-blue" href="#">Вернуться в каталог</a>
+                    <a class="form-sent-info-white" href="#">Перейти в личный кабинет</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
