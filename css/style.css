@@ -1,0 +1,592 @@
+/*
+Задание выполнял Прокин Евгений;
+Время выполнения 10 часов;
+Прошу простить за неиспользование препроцессоров, пользуюсь ими редко по причине отсутствия больших проектов.
+
+Задание было полезным для меня, надеюсь, что я не сильно его запорол^^
+*/
+
+
+/*Шрифты*/
+@font-face {
+    font-family: 'GOST-UI-2-Bold';
+    src: url("../fonts/GOST\ UI\ 2\ Bold.ttf");
+}
+
+@font-face {
+    font-family: 'GOST-UI-2';
+    src: url("../fonts/GOST\ UI\ 2.ttf");
+}
+
+@font-face {
+    font-family: 'SFProDisplay-Bold';
+    src: url("../fonts/SFProDisplay-Bold.ttf");
+}
+
+/*Стили ОБЩИЕ*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #F5F5F7;
+}
+
+/*Стили HEADER*/
+.header {
+    width: 100%;
+    background-color: #3684E2;
+    box-shadow: 0px 5px 8px 2px #c4c4c4;
+}
+
+.header-wrapper {
+    max-width: 1180px;
+    min-height: 88px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-text {
+    margin-left: 20px;
+    font-family: 'GOST-UI-2-Bold';
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+}
+
+.header-user-img {
+    margin-right: 12px;
+    opacity: 0.7;
+}
+
+.header-user-name,
+.header-user-link {
+    font-family: 'GOST-UI-2';
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.header-user-link {
+    margin-left: 28px;
+}
+
+
+/*Стили MAIN*/
+.main {
+    max-width: 1180px;
+    margin: 64px auto;
+}
+
+.main-service {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-service-discription {
+    max-width: 740px;
+}
+
+.main-service-discription-h1 {
+    font-family: 'SFProDisplay-Bold';
+    font-size: 48px;
+    line-height: 56px;
+    color: #3B4256;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.main-service-discription-text {
+    font-family: 'GOST-UI-2';
+    color: #3B4256;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.main-service-agency {
+    max-width: 260px;
+}
+
+.main-service-agency-img {
+    margin-bottom: 16px;
+}
+
+.main-service-agency-title {
+    font-family: 'GOST-UI-2';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #3B4256;
+    margin-bottom: 8px;
+}
+
+.main-service-agency-discription {
+    font-family: 'GOST-UI-2';
+    font-size: 14px;
+    line-height: 20px;
+    color: #3B4256;
+}
+
+.main-hr {
+    margin: 40px auto;
+}
+
+
+/*Стили main-form*/
+.main-form {
+    max-width: 740px;
+}
+
+.main-form-block {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+}
+
+.main-form-block-declarant,
+.main-form-block-data,
+.main-form-block-consent,
+.form-sent-block {
+    background-color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.main-form-block-data-wrapper,
+.main-form-block-consent-wrapper {
+    pointer-events: none;
+}
+
+.main-form-block-declarant-wrapper,
+.main-form-block-data-wrapper,
+.main-form-block-consent-wrapper,
+.form-sent-block-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.main-form-block-declarant-first {
+    background-color: #0061D9;
+}
+
+.main-form-block-declarant-h2 {
+    color: #3B4256;
+}
+
+.main-form-block-data-second,
+.main-form-block-consent-third {
+    background-color: #BCC3CA;
+}
+
+.main-form-block-data-second-h2,
+.main-form-block-consent-third-h2 {
+    color: #BCC3CA;
+}
+
+.main-form-block-declarant-first,
+.main-form-block-data-second,
+.main-form-block-consent-third {
+    font-family: 'SFProDisplay-Bold';
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 22px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.main-form-block-declarant-h2,
+.main-form-block-data-second-h2,
+.main-form-block-consent-third-h2,
+.form-sent-block-wrapper-h2 {
+    font-family: 'SFProDisplay-Bold';
+    font-size: 21px;
+    line-height: 32px;
+    margin-left: 32px;
+}
+
+.main-form-block-data-btn,
+.main-form-block-consent-btn {
+    padding: 0 !important;
+}
+
+.panel {
+    display: none;
+}
+
+.panel-declarant-none {
+    display: none;
+}
+
+.panel-declarant {
+    display: flex;
+    max-width: 450px;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.panel-data {
+    display: flex;
+    max-width: 450px;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.panel-consent {
+    display: flex;
+    max-width: 450px;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.panel-wrapper {
+    display: flex;
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.panel-wrapper label {
+    display: flex;
+    width: 100%;
+    padding: 18px;
+}
+
+.line {
+    box-shadow: 0 0 0 2px #0061D9;
+}
+
+.main-form-block-declarant-item-info {
+    font-family: 'GOST-UI-2';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.main-form-block-declarant-item-info span {
+    font-weight: bold;
+}
+
+.grey {
+    background: #F5F5F7;
+}
+
+.main-btn-next {
+    max-width: 450px;
+    height: 48px;
+    border: 0;
+    background: #0061D9;
+    border-radius: 4px;
+    font-family: 'GOST-UI-2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.main-form-block-declarant .panel-declarant input,
+.main-form-block-data .panel-data input,
+.main-form-block-consent .panel-consent input {
+    max-width: 450px;
+    min-height: 48px;
+    padding-left: 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(59, 66, 86, 0.5);
+    font-family: 'GOST-UI-2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.main-form-block-declarant .panel-declarant label,
+.main-form-block-data .panel-data label,
+.main-form-block-consent .panel-consent label {
+    font-family: 'GOST-UI-2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.main-form-block-data .panel label {
+    font-family: 'GOST-UI-2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #3B4256;
+    margin-bottom: 8px;
+}
+
+.panel-doc {
+    font-family: 'GOST-UI-2';
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #3B4256;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.panel-passport {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-passport-series input {
+    width: 148px;
+}
+
+.panel-passport-number input {
+    width: -webkit-fill-available;
+}
+
+
+
+.panel-passport-received-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 450px;
+}
+
+.panel-passport-received-wrapper-day, 
+.panel-passport-received-wrapper-month, 
+.panel-passport-received-wrapper-year {
+    margin: 0 auto;
+    width: 33%;
+}
+.panel-passport-received-wrapper-day input {
+    width: 126px;
+}
+
+.panel-passport-received-wrapper-month input {
+    width: 126px;
+}
+
+.panel-passport-received-wrapper-year input {
+    width: -webkit-fill-available;
+}
+
+.main-form-block-consent .panel .panel-doc {
+    margin-bottom: 0px;
+}
+
+.panel-list {
+    padding: 16px;
+}
+
+.panel-item {
+    margin-bottom: 8px;
+}
+
+.panel-item:last-child {
+    margin-bottom: 24px;
+}
+
+.panel-item-text {
+    font-family: 'GOST-UI-2';
+    font-size: 18px;
+    line-height: 24px;
+    color: #3B4256;
+}
+
+.panel-confirm,
+.notification {
+    min-height: 74px;
+    background: #F5F5F7;
+    margin-bottom: 16px;
+}
+
+.notification {
+    background-color: #ffffff !important;
+}
+
+.panel-confirm label {
+    display: flex;
+    padding: 16px;
+}
+
+.panel-confirm p {
+    font-family: 'GOST-UI-2';
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 8px;
+}
+
+.panel-check {
+    max-width: 450px;
+    min-height: 72px;
+    background-color: #FFF5E5;
+    padding: 16px 16px 0 16px;
+    margin-bottom: 16px;
+}
+
+.panel-check-wrapper {
+    display: flex;
+
+}
+
+.panel-check-wrapper-img {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+.panel-check-wrapper-text {
+    font-family: 'GOST-UI-2';
+    font-size: 18px;
+    line-height: 24px;
+    color: #3B4256;
+}
+
+.specification {
+    font-family: 'GOST-UI-2';
+    font-size: 14px;
+    line-height: 20px;
+    color: #3B4256;
+    margin: 16px 0 24px 0;
+}
+
+.specification-link,
+.form-sent-info-number-link {
+    color: blue;
+}
+
+.form-sent {
+    max-width: 740px;
+    display: none;
+}
+
+.form-sent-block-wrapper-vector {
+    background-color: #1BC400;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.form-sent-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 97px;
+}
+
+.form-sent-info-number,
+.form-sent-info-contact {
+    font-family: 'GOST-UI-2';
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    max-width: 544px;
+}
+
+#statement-number {
+    font-weight: bold;
+}
+
+.form-sent-button {
+    display: flex;
+    justify-content: space-between;
+    max-width: 544px;
+    margin-left: 97px;
+}
+
+.form-sent-info-btn-blue,
+.form-sent-info-white {
+    width: 256px;
+    min-height: 48px;
+    border: 0;
+    border-radius: 4px;
+    font-family: 'GOST-UI-2';
+    font-size: 18px;
+    line-height: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.form-sent-info-btn-blue {
+    background-color: #0061D9;
+    color: #ffffff;
+}
+
+.form-sent-info-white {
+    background-color: #ffffff;
+    color: #0061D9;
+    border: 1px solid #0061D9;
+}
+
+div:disabled {
+    background-color: #c4c4c4;
+}
+
+
+/*Стили для флагов input*/
+.panel-label input[type='radio'],
+.panel-confirm input[type='checkbox'] {
+    display: none;
+}
+
+.panel-checkbox {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border: 2px solid #3B4256;
+    border-radius: 100%;
+    margin-right: 8px;
+}
+
+input[type="radio"]:checked+span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 8px solid #0061D9;
+    border-radius: 100%;
+    margin-right: 8px;
+}
+
+.panel-confirm span {
+    width: 29px;
+    height: 18px;
+    border: 2px solid #3B4256;
+    border-radius: 1px;
+}
+
+.panel-confirm input[type='checkbox']:checked+span {
+    background: #0061D9;
+    border: 2px solid #0061D9;
+}
+
+.panel-confirm input[type="checkbox"]:checked+span img {
+    width: 19px;
+    height: 12px;
+}
